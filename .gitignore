@@ -20,6 +20,7 @@ n8n-backups/
 
 # MCP configuration (contains sensitive data)
 .mcp/settings.json
+.claude/mcp-config.json
 
 # Logs
 *.log

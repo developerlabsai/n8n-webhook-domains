@@ -32,9 +32,36 @@ This project provides everything you need to fix this issue and set up a product
 - SSH access to your server
 - Basic Linux command-line knowledge
 
-### 1. Clone This Repository
+### Step 0: (Optional but Recommended) Set Up MCP Servers
+
+**For Claude Desktop Users:** Set up MCP servers to automate most of this process.
 
 On your **local machine**:
+```bash
+# Clone the repository first
+git clone https://github.com/developerlabsai/n8n-webhook-domains.git
+cd n8n-webhook-domains
+
+# Run the MCP setup script
+./scripts/setup-mcp.sh
+```
+
+This will:
+- Install AWS, SSH, Docker, and Filesystem MCP servers
+- Configure them specifically for this project
+- Set up Claude Desktop to manage your AWS infrastructure
+
+**Benefits:** With MCP servers, Claude can automatically configure AWS, SSH into your EC2, and manage deployments - reducing setup time from 2-3 hours to 15-20 minutes!
+
+See [MCP_SERVERS.md](MCP_SERVERS.md) for detailed information.
+
+**Note:** MCP servers only work with Claude Desktop app, not Claude Code CLI.
+
+---
+
+### 1. Clone This Repository
+
+On your **local machine** (skip if you already cloned in Step 0):
 ```bash
 git clone https://github.com/developerlabsai/n8n-webhook-domains.git
 cd n8n-webhook-domains
