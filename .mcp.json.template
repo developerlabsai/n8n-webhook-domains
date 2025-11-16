@@ -1,0 +1,38 @@
+{
+  "mcpServers": {
+    "filesystem": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "/Users/clancehoskin/Projects/n8n Webhook and Domains"
+      ],
+      "env": {}
+    },
+    "aws": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-aws"],
+      "env": {
+        "AWS_REGION": "us-east-1",
+        "AWS_PROFILE": "default"
+      }
+    },
+    "ssh-ec2": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-ssh"],
+      "env": {
+        "SSH_HOST": "YOUR_EC2_IP_OR_DOMAIN",
+        "SSH_USER": "ubuntu",
+        "SSH_KEY_PATH": "/path/to/your-key.pem",
+        "SSH_PORT": "22"
+      }
+    },
+    "docker": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-docker"],
+      "env": {
+        "DOCKER_HOST": "ssh://ubuntu@YOUR_EC2_IP"
+      }
+    }
+  }
+}

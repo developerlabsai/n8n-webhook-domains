@@ -34,7 +34,7 @@ This project provides everything you need to fix this issue and set up a product
 
 ### Step 0: (Optional but Recommended) Set Up MCP Servers
 
-**For Claude Desktop Users:** Set up MCP servers to automate most of this process.
+**For Claude Code Users:** Set up MCP servers **for this project only** to automate most of this process.
 
 On your **local machine**:
 ```bash
@@ -42,20 +42,30 @@ On your **local machine**:
 git clone https://github.com/developerlabsai/n8n-webhook-domains.git
 cd n8n-webhook-domains
 
-# Run the MCP setup script
-./scripts/setup-mcp.sh
+# Install MCP servers globally (one-time)
+npm install -g @modelcontextprotocol/server-filesystem \
+  @modelcontextprotocol/server-aws \
+  @modelcontextprotocol/server-ssh \
+  @modelcontextprotocol/server-docker
+
+# Configure AWS credentials (one-time)
+aws configure
+
+# Project already includes .mcp.json - Claude Code will prompt you to approve
+# when you open the project
 ```
 
-This will:
-- Install AWS, SSH, Docker, and Filesystem MCP servers
-- Configure them specifically for this project
-- Set up Claude Desktop to manage your AWS infrastructure
+**To enable full automation (AWS/SSH/Docker):**
+1. Copy `.mcp.json.template` to `.mcp.local.json`
+2. Edit with your EC2 IP and SSH key path
+3. Rename `.mcp.local.json` to `.mcp.json`
+4. Claude Code will prompt for approval
 
 **Benefits:** With MCP servers, Claude can automatically configure AWS, SSH into your EC2, and manage deployments - reducing setup time from 2-3 hours to 15-20 minutes!
 
-See [MCP_SERVERS.md](MCP_SERVERS.md) for detailed information.
+See **[MCP_SETUP.md](MCP_SETUP.md)** for complete setup instructions.
 
-**Note:** MCP servers only work with Claude Desktop app, not Claude Code CLI.
+**Note:** MCP configuration is **project-specific** - it won't affect other Claude Code projects or consume tokens globally.
 
 ---
 
