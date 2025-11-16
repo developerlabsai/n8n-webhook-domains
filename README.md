@@ -36,7 +36,7 @@ This project provides everything you need to fix this issue and set up a product
 
 On your **local machine**:
 ```bash
-git clone https://github.com/yourusername/n8n-webhook-domains.git
+git clone https://github.com/developerlabsai/n8n-webhook-domains.git
 cd n8n-webhook-domains
 ```
 
@@ -333,7 +333,7 @@ See [docs/TROUBLESHOOTING.md](docs/TROUBLESHOOTING.md) for more solutions.
 - **n8n Documentation:** https://docs.n8n.io
 - **n8n Community:** https://community.n8n.io
 - **GitHub Issues:** https://github.com/n8n-io/n8n/issues
-- **This Project Issues:** [Create an issue](https://github.com/yourusername/n8n-webhook-domains/issues)
+- **This Project Issues:** [Create an issue](https://github.com/developerlabsai/n8n-webhook-domains/issues)
 
 ## Resources
 
