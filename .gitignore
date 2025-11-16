@@ -1,0 +1,54 @@
+# Environment files
+.env
+*.env.local
+*.env.production
+
+# Credentials
+CREDENTIALS.txt
+credentials.txt
+*.pem
+*.key
+
+# n8n data
+local-files/
+n8n_data/
+
+# Backups
+n8n-backups/
+*.tar.gz
+*.backup
+
+# MCP configuration (contains sensitive data)
+.mcp/settings.json
+
+# Logs
+*.log
+logs/
+
+# OS files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# IDE files
+.vscode/
+.idea/
+*.iml
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Node modules (if using local npm)
+node_modules/
+
+# SSL certificates (should be managed by certbot)
+*.crt
+*.csr
+ssl/
+
+# Docker volumes
+volumes/
